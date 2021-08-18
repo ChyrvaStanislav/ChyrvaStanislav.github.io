@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://solutionshub.epam.com/sitemap.xml
-Host: https://solutionshub.epam.com
