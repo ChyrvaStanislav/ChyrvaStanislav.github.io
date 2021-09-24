@@ -31,6 +31,12 @@
     color: #b90e0a;
 }
 
+.animal button:focus {
+    color: #b90e0a;
+    border: 1px solid plum;
+    border-radius: 5px;
+}
+
 .animal button::after {
     content: '';
     display: block;
