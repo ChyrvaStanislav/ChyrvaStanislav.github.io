@@ -145,7 +145,7 @@ class Snake extends Animal {
 
 const dog = new Dog('Bob');
 const cat = new Cat('Cat');
-const snake = new Snake('Simon', 'poison');
+const snake = new Snake('Poison Simon', 'poison');
 const snake2 = new Snake('Safe Simon');
 
 dog.render('.container');
