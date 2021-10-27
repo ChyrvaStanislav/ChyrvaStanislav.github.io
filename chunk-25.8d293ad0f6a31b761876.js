@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[25],{861:function(n,o,w){"use strict";w.r(o);o.default=function(){return window.parent.postMessage(window.location.search),null}}}]);
