@@ -1,0 +1,35 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Item 1",
+      "color": "#A52A2A",
+      "isFavorite": false
+    },{
+      "id": 2,
+      "name": "Item 2",
+      "color": "#D2691E",
+      "isFavorite": false
+    },{
+      "id": 3,
+      "name": "Item 3",
+      "color": "#006400",
+      "isFavorite": false
+    },{
+      "id": 4,
+      "name": "Item 4",
+      "color": "#483D8B",
+      "isFavorite": false
+    },{
+      "id": 5,
+      "name": "Item 5",
+      "color": "#FF69B4",
+      "isFavorite": false
+    },{
+      "id": 6,
+      "name": "Item 6",
+      "color": "#663399",
+      "isFavorite": false
+    }
+  ]
+}
