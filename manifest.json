@@ -1,0 +1,8 @@
+{
+  "short_name": "What is Front End?",
+  "name": "What is Front End first presentation",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
