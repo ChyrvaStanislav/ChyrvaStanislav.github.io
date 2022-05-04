@@ -1,33 +1,50 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>EPAM SolutionsHub | Software Solutions for Digital Business</title>
-    <link rel="shortcut icon" href="/src/v2_common/images/favicon.ico">
-    <link rel="preconnect" href="https://www.gstatic.com">
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="theme-color" content="#000000"/>
-    <meta name="robots" content="noindex nofollow"/>
-    <meta name="google-site-verification" content="CWaIvh3WwxpG-M9GfKnyaJ68lo_Y1FEWs7VVJERvTZo"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:description"
-          content="SolutionsHub is a one-stop repository for software solutions created to solve business challenges that our clients struggle with."/>
-    <meta name="twitter:title" content="EpamSolutionsHub"/>
-    <meta name="twitter:site" content="@EPAMSYSTEMS"/>
-    <meta name="twitter:image" content="https://solutionshub.epam.com/src/common/images/Twitter_Banner.jpg"/>
-    <script defer="defer" src="/bundle-9521eb1c380be774e922.js"></script>
-    <script defer="defer" src="/bundle-da22c11710ea9204472f.js"></script>
-    <link href="/main.1ef9697769a07ce886fd.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SLIDER</title>
+    <script defer src="index.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PV6Z3PK" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-<noscript>You need to enable JavaScript to run this app.</noscript>
-<div id="root">Loading...</div>
-<div id="modal"></div>
+<main>
+    <h1>WOW Slider!</h1>
+    <div class="category-container">
+        <button data-category="beacon">Бекон</button>
+        <button data-category="bear">Медведь</button>
+    </div>
+    <div class="slider-container">
+        <div class="image-holder"></div>
+
+        <div class="button-container">
+            <button>
+                <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M15.41,16.58L10.83,12L15.41,7.41L14,6L8,12L14,18L15.41,16.58Z"/>
+                </svg>
+            </button>
+
+            <button>
+                <svg style="width:44px;height:44px" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+                </svg>
+            </button>
+        </div>
+
+        <div class="bullet-container">
+<!--            <span class="bullet bullet-active"></span>-->
+<!--            <span class="bullet"></span>-->
+<!--            <span class="bullet"></span>-->
+<!--            <span class="bullet"></span>-->
+<!--            <span class="bullet"></span>-->
+        </div>
+
+        <div class="counter-container">
+            <span>0/5</span>
+        </div>
+    </div>
+</main>
 </body>
 </html>
