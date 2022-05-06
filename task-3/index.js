@@ -34,9 +34,9 @@ const inputCollection = form.querySelectorAll('input');
 
 const onInput = (event) => {
 	event.target.value = event.target.value
-		.replaceAll('?', '')
-		.replaceAll('!', '')
-		.replaceAll('=', '')
+		.replaceAll('<', '')
+		.replaceAll('>', '')
+		.replaceAll('</', '')
 }
 
 inputCollection.forEach(input => {
