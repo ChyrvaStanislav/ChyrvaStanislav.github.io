@@ -8,7 +8,10 @@ const onSubmit = (event) => {
 	const inputCollection = form.querySelectorAll('input');
 	const values = {};
 
-	inputCollection.forEach(input => values[input.name] = input.value);
+	inputCollection.forEach(input => {
+		values[input.name] = input.value;
+		input.value = '';
+	});
 	console.log(values);
 }
 
