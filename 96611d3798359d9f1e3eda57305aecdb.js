@@ -1,1 +1,0 @@
-export default function Worker_fn(){return new Worker(__webpack_public_path__+"bundle-391369f9ca73b90498f0.worker.js")}
