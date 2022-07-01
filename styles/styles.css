@@ -1,0 +1,101 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: sans-serif;
+}
+
+.animal {
+    margin: 30px 0;
+    width: 100px;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    transition: .2s ease-out;
+    user-select: none;
+}
+
+.animal button {
+    background: none;
+    border: none;
+    outline: unset;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: tomato;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.animal button:hover {
+    color: #b90e0a;
+}
+
+.animal button:focus {
+    color: #b90e0a;
+    border: 1px solid plum;
+    border-radius: 5px;
+}
+
+.animal button::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.animal span {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    color: grey;
+    font-weight: 500;
+}
+
+.dog {
+    background-image: url("../assets/dog.png");
+}
+
+.cat {
+    background-image: url("../assets/cat.png");
+}
+
+.snake {
+    background-image: url("../assets/snake.png");
+}
+
+@keyframes shake {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
+    }
+}
+
+.cat-say::after, .dog-say::after {
+    position: absolute;
+    top: 10px;
+    right: -80px;
+    font-weight: 800;
+    font-size: 24px;
+    animation: shake .2s ease-out;
+}
+
+
+.cat-say::after {
+    content: 'No!';
+    color: tomato;
+}
+
+.dog-say::after {
+    content: 'Woof!';
+    color: seagreen;
+}
