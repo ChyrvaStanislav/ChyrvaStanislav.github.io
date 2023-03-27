@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="53px" viewBox="0 0 60 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>3.0 Icons / Dropdown Header / Request Solution Banner example</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="43.5482781" height="39.0507267" rx="2.82947368"></rect>
+        <filter x="-16.1%" y="-12.8%" width="132.1%" height="135.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="0" y="0" width="45.1901552" height="37.7449553" rx="2.82947368"></rect>
+        <filter x="-15.5%" y="-13.2%" width="131.0%" height="137.1%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.15 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Request-Solution-Banner/1344" transform="translate(-96.000000, -35.000000)">
+            <g id="3.0-Icons-/-Dropdown-Header-/-Request-Solution-Banner-example" transform="translate(98.000000, 32.000000)">
+                <g id="Group-14-Copy" transform="translate(2.116255, 5.250000)">
+                    <g id="Group-12" transform="translate(0.128258, 0.238543)">
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                            <use fill="#A7EADB" fill-rule="evenodd" xlink:href="#path-1"></use>
+                        </g>
+                        <path d="M2.82947368,1.27915696e-14 L40.7188044,1.27915696e-14 C42.2814796,1.25045108e-14 43.5482781,1.26679852 43.5482781,2.82947368 L43.5482781,9.11183623 L43.5482781,9.11183623 L3.77972916e-13,9.11183623 L3.77972916e-13,2.82947368 C3.77781543e-13,1.26679852 1.26679852,1.219045e-14 2.82947368,1.27915696e-14 Z" id="Rectangle" fill="#168A72"></path>
+                    </g>
+                </g>
+                <g id="Group-14-Copy-2" transform="translate(9.183453, 12.250000)">
+                    <g id="Group-12" transform="translate(0.133094, 0.230567)">
+                        <g id="Rectangle">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                            <use fill="#A7EADB" fill-rule="evenodd" xlink:href="#path-3"></use>
+                        </g>
+                        <path d="M2.82947368,1.23638473e-14 L42.3606816,1.23638473e-14 C43.9233567,1.25208778e-14 45.1901552,1.26679852 45.1901552,2.82947368 L45.1901552,8.80715623 L45.1901552,8.80715623 L3.92223424e-13,8.80715623 L3.92223424e-13,2.82947368 C3.92476141e-13,1.26679852 1.26679852,1.30949953e-14 2.82947368,1.23638473e-14 Z" id="Rectangle" fill="#1DA488"></path>
+                        <g id="Group" transform="translate(3.260791, 13.027009)" fill="#1DA488" opacity="0.45">
+                            <rect id="Rectangle-Copy" x="0" y="0" width="25.1546763" height="7.95454545" rx="1.75"></rect>
+                            <rect id="Rectangle-Copy-2" x="0" y="10.6060606" width="25.1546763" height="7.95454545" rx="1.75"></rect>
+                            <rect id="Rectangle-Copy-4" x="27.9496403" y="0" width="9.7823741" height="7.95454545" rx="1.75"></rect>
+                            <rect id="Rectangle-Copy-5" x="27.9496403" y="10.6060606" width="9.7823741" height="7.95454545" rx="1.75"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
