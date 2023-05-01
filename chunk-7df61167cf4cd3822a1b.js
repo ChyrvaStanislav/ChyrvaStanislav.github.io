@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkmrkt_web_client_app=self.webpackChunkmrkt_web_client_app||[]).push([[718],{67718:function(e,n,t){t.r(n);n.default=()=>(window.parent.postMessage(window.location.search),null)}}]);
