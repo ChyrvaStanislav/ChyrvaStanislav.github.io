@@ -1,21 +1,112 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <link rel="icon" href="/favicon.ico" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="description" content="Web site created using create-react-app" />
-  <link rel="apple-touch-icon" href="/logo192.png" />
-  <link rel="manifest" href="/manifest.json" />
-  <title>React App</title>
-  <script defer="defer" src="/static/js/main.5cac62ed.js"></script>
-  <link href="/static/css/main.30967842.css" rel="stylesheet">
+  <title>HTML Semantic Elements</title>
 </head>
 <body>
-<noscript>You need to enable JavaScript to run this app.</noscript>
 
-<h1>V2</h1>
-<div id="root"></div>
+
+<div class='w3-col l10 m12' id='main'>
+  <div id='mainLeaderboard' style='overflow:hidden;'>
+    <div id="adngin-main_leaderboard-0"></div>
+  </div>
+
+
+  <h1>HTML <span class="color_h1">Semantic Elements</span></h1>
+  <hr>
+  <p class="intro">Semantic elements = elements with a meaning.</p>
+  <hr>
+
+  <h2>What are Semantic Elements?</h2>
+  <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
+  <p>Examples of <strong>non-semantic</strong> elements: <code class="w3-codespan">&lt;div&gt;</code> and <code
+      class="w3-codespan">&lt;span&gt;</code> - <i>Tells nothing about its content.</i></p>
+  <p>Examples of <strong>semantic</strong> elements: <code class="w3-codespan">&lt;form&gt;</code>, <code
+      class="w3-codespan">&lt;table&gt;</code>, and <code class="w3-codespan">&lt;article&gt;</code> - <i>Clearly
+    defines its content.</i></p>
+
+  <br>
+  <a href="https://www.w3schools.com/html/" target="_blank">Read more</a>
+
+  <hr>
+
+  <h2>Semantic Elements in HTML</h2>
+  <p>Many web sites contain HTML code like:
+    &lt;div id="nav"&gt; &lt;div class=&quot;header&quot;&gt; &lt;div id=&quot;footer&quot;&gt;
+    to indicate navigation, header, and footer.</p>
+  <p>In HTML there are some semantic elements that can be used to define different parts of a web page:
+    &nbsp;</p>
+
+  <div>
+    <ul>
+      <li>&lt;article&gt;</li>
+      <li>&lt;aside&gt;</li>
+      <li>&lt;details&gt;</li>
+    </ul>
+  </div>
+
+  <div><img alt="HTML Semantic Elements" title="HTML Semantic Elements" src="./img_sem_elements.gif" width="219" height="258"></div>
+
+  <p style="clear:both;"></p>
+
+  <hr>
+  <h2>HTML &lt;section&gt; Element</h2>
+  <p>The <code class="w3-codespan">&lt;section&gt;</code> element defines a section in a document.</p>
+  <p>According to W3C's HTML documentation: &quot;A section is a thematic grouping of content, typically with a
+    heading.&quot;</p>
+  <p>Examples of where a <code class="w3-codespan">&lt;section&gt;</code> element can be used:</p>
+  <ol>
+    <li>Chapters</li>
+    <li>Introduction</li>
+    <li>News items</li>
+    <li>Contact information</li>
+  </ol>
+  <p>A web page could normally be split into sections for introduction,
+    content, and contact information.</p>
+
+  <div class="w3-example">
+    <h3>Example</h3>
+    <p>Two sections in a document:</p>
+
+    <div class="w3-code notranslate htmlHigh">
+          <pre>
+            <code>
+            &lt;section&gt;
+              &lt;h1&gt;WWF&lt;/h1&gt;
+              &lt;p&gt;
+                The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation.
+              &lt;/p&gt;
+            &lt;/section&gt;
+
+            &lt;section&gt;
+              &lt;h1&gt;WWF's Panda symbol&lt;/h1&gt;
+              &lt;p&gt;
+                The Panda has become the symbol of WWF.
+              &lt;/p&gt;
+            &lt;/section&gt;
+            </code>
+          </pre>
+
+    </div>
+  </div>
+
+
+  <hr>
+
+  <form action="">
+    <h4>Simple form</h4>
+    <div>
+      <label for="name">Yor name</label>
+    </div>
+
+    <input type="text" id="name" name="name" placeholder="John">
+    <button type="submit">Submit</button>
+  </form>
+  <br>
+  <hr>
+  <br>
+  <br>
+</div>
+
 </body>
 </html>
