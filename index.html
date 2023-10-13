@@ -1,113 +1,42 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <title>HTML Semantic Elements</title>
-  <link rel="icon" href="./favicon-32x32.png" type="image/png">
-</head>
-<body>
-
-
-<div class='w3-col l10 m12' id='main'>
-  <div id='mainLeaderboard' style='overflow:hidden;'>
-    <div id="adngin-main_leaderboard-0"></div>
-  </div>
-
-
-  <h1>HTML <span class="color_h1">Semantic Elements</span></h1>
-  <hr>
-  <p class="intro">Semantic elements = elements with a meaning.</p>
-  <hr>
-
-  <h2>What are Semantic Elements?</h2>
-  <p>A semantic element clearly describes its meaning to both the browser and the developer.</p>
-  <p>Examples of <strong>non-semantic</strong> elements: <code class="w3-codespan">&lt;div&gt;</code> and <code
-      class="w3-codespan">&lt;span&gt;</code> - <i>Tells nothing about its content.</i></p>
-  <p>Examples of <strong>semantic</strong> elements: <code class="w3-codespan">&lt;form&gt;</code>, <code
-      class="w3-codespan">&lt;table&gt;</code>, and <code class="w3-codespan">&lt;article&gt;</code> - <i>Clearly
-    defines its content.</i></p>
-
-  <br>
-  <a href="https://www.w3schools.com/html/" target="_blank">Read more</a>
-
-  <hr>
-
-  <h2>Semantic Elements in HTML</h2>
-  <p>Many web sites contain HTML code like:
-    &lt;div id="nav"&gt; &lt;div class=&quot;header&quot;&gt; &lt;div id=&quot;footer&quot;&gt;
-    to indicate navigation, header, and footer.</p>
-  <p>In HTML there are some semantic elements that can be used to define different parts of a web page:
-    &nbsp;</p>
-
-  <div>
-    <ul>
-      <li>&lt;article&gt;</li>
-      <li>&lt;aside&gt;</li>
-      <li>&lt;details&gt;</li>
-    </ul>
-  </div>
-
-  <div><img alt="HTML Semantic Elements" title="HTML Semantic Elements" src="./img_sem_elements.gif" width="219" height="258"></div>
-
-  <p style="clear:both;"></p>
-
-  <hr>
-  <h2>HTML &lt;section&gt; Element</h2>
-  <p>The <code class="w3-codespan">&lt;section&gt;</code> element defines a section in a document.</p>
-  <p>According to W3C's HTML documentation: &quot;A section is a thematic grouping of content, typically with a
-    heading.&quot;</p>
-  <p>Examples of where a <code class="w3-codespan">&lt;section&gt;</code> element can be used:</p>
-  <ol>
-    <li>Chapters</li>
-    <li>Introduction</li>
-    <li>News items</li>
-    <li>Contact information</li>
-  </ol>
-  <p>A web page could normally be split into sections for introduction,
-    content, and contact information.</p>
-
-  <div class="w3-example">
-    <h3>Example</h3>
-    <p>Two sections in a document:</p>
-
-    <div class="w3-code notranslate htmlHigh">
-          <pre>
-            <code>
-            &lt;section&gt;
-              &lt;h1&gt;WWF&lt;/h1&gt;
-              &lt;p&gt;
-                The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation.
-              &lt;/p&gt;
-            &lt;/section&gt;
-
-            &lt;section&gt;
-              &lt;h1&gt;WWF's Panda symbol&lt;/h1&gt;
-              &lt;p&gt;
-                The Panda has become the symbol of WWF.
-              &lt;/p&gt;
-            &lt;/section&gt;
-            </code>
-          </pre>
-
-    </div>
-  </div>
-
-
-  <hr>
-
-  <form action="">
-    <h4>Simple form</h4>
-    <div>
-      <label for="name">Yor name</label>
-    </div>
-
-    <input type="text" id="name" name="name" placeholder="John">
-    <button type="submit">Submit</button>
-  </form>
-  <br>
-  <hr>
-  <br>
-  <br>
-</div>
-
-</body>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <title>CSS Grid practice</title>
+        <link rel="stylesheet" href="styles/reset.css">
+        <link href="./styles/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <section class="grid-container">
+            <!-- div.grid-item.grid-item-$*24>{$} -->
+            <div class="grid-item grid-item-1">1</div>
+            <div class="grid-item grid-item-2">2</div>
+            <div class="grid-item grid-item-3">3</div>
+            <div class="grid-item grid-item-4">4</div>
+            <div class="grid-item grid-item-5">5</div>
+            <div class="grid-item grid-item-6">6</div>
+            <div class="grid-item grid-item-7">7</div>
+            <div class="grid-item grid-item-8">8</div>
+            <div class="grid-item grid-item-9">9</div>
+            <div class="grid-item grid-item-10">10</div>
+            <div class="grid-item grid-item-11">11</div>
+            <div class="grid-item grid-item-12">12</div>
+            <div class="grid-item grid-item-13">13</div>
+            <div class="grid-item grid-item-14">14</div>
+            <div class="grid-item grid-item-15">15</div>
+            <div class="grid-item grid-item-16">16</div>
+            <div class="grid-item grid-item-17">17</div>
+            <div class="grid-item grid-item-18">18</div>
+            <div class="grid-item grid-item-19">19</div>
+            <div class="grid-item grid-item-20">20</div>
+            <div class="grid-item grid-item-21">21</div>
+            <div class="grid-item grid-item-22">22</div>
+            <div class="grid-item grid-item-23">23</div>
+            <div class="grid-item grid-item-24">24</div>
+        </section>
+    </body>
 </html>
