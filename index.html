@@ -6,8 +6,65 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script defer src="index.js"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-Hello
+
+<template id="student-card-template">
+  <div class="student-card">
+    <h3 class="student-card__name">ALice</h3>
+    <p class="student-card__age">Age: <span>22</span></p>
+    <p class="student-card__grade">Grade: <span>A</span></p>
+  </div>
+</template>
+
+<template id="student-modal-template">
+  <div class="student-modal">
+    <div class="student-modal__info-container">
+      <button class="student-modal__close-button"><span>X</span></button>
+      <h3 class="student-modal__name">ALice</h3>
+      <p class="student-modal__city">City: <span>New York</span></p>
+    </div>
+  </div>
+</template>
+
+<template id="preloader-template">
+  <div class="preloader">
+    <div class="lds-ring">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</template>
+
+<div class="widget-panel">
+  <label for="sort-select">
+    Sort by:
+    <select name="sort-select" id="sort-select">
+      <option selected value="nameUp">Name ↑</option>
+      <option value="nameDown">Name ↓</option>
+      <option value="ageUp">Age ↑</option>
+      <option value="ageDown">Age ↓</option>
+    </select>
+  </label>
+
+  <label for="filter-select">
+    Filter by grade:
+    <select name="filter-select" id="filter-select">
+      <option selected value="all">All</option>
+      <option value="gradeA">A</option>
+      <option value="gradeB">B</option>
+      <option value="gradeC">C</option>
+    </select>
+  </label>
+</div>
+
+<div class="student-container">
+
+</div>
+
 </body>
 </html>
