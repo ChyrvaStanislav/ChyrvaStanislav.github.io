@@ -1,135 +1,110 @@
-/**
- * @return {boolean}
- */
-const getRandomChance = ()=> Math.random() < 0.5;
+import { DeleteModal, EditModal } from "./modal/modal.js";
+import { ArticleCard, ImageCard } from "./card/card.js";
 
-// Далее пример решения студентами fe-30
 
-/** Class representing a point. */
-class Animal{
-    /**
-     * @param animalName {string}
-     */
-    constructor(animalName) {
-        if (animalName.length < 3) {
-            throw new Error ('Less than 3 symbols')
-        }
+const posts = [
+    {
+        id: 1,
+        title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+        body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+    },
+    {
+        id: 2,
+        title: "qui est esse",
+        body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+    },
+    {
+        id: 3,
+        title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+        body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+    },
+    {
+        id: 4,
+        title: "eum et est occaecati",
+        body: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+    },
+    {
+        id: 5,
+        title: "nesciunt quas odio",
+        body: "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+    },
+    {
+        id: 6,
+        title: "dolorem eum magni eos aperiam quia",
+        body: "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+    },
+    {
+        id: 7,
+        title: "magnam facilis autem",
+        body: "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+    },
+    {
+        id: 8,
+        title: "dolorem dolore est ipsam",
+        body: "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+    },
+    {
+        id: 9,
+        title: "nesciunt iure omnis dolorem tempora et accusantium",
+        body: "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+    },
+    {
+        id: 10,
+        title: "optio molestias id quia eum",
+        body: "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+    },
+    {
+        id: 11,
+        title: "et ea vero quia laudantium autem",
+        body: "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
+    },
+    {
+        id: 12,
+        title: "in quibusdam tempore odit est dolorem",
+        body: "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
+    },
+    {
+        id: 13,
+        title: "dolorum ut in voluptas mollitia et saepe quo animi",
+        body: "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
+    },
+    {
+        id: 14,
+        title: "voluptatem eligendi optio",
+        body: "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
+    },
+    {
+        id: 15,
+        title: "eveniet quod temporibus",
+        body: "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
+    },
+    {
+        id: 16,
+        title: "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
+        body: "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
+    },
+];
 
-        this._animalName = animalName;
-        this.container = document.createElement("div");
-        this.button = document.createElement("button");
-        this.span = document.createElement("span");
-        this.x = 0;
+function deleteFunc(){
+    function onConfirm(){
+        this._mainContainer.remove();
     }
 
-    set name(animalName) {
-        if (animalName.length >= 3) {
-            this._animalName = animalName;
-        }
-        else {
-            throw new Error ('Less than 3 symbols')
-        }
-    }
-
-    getRandomChance(){
-        return Math.random() < 0.5;
-    };
-
-    move(){
-        this.x += 20;
-        this.container.style.transform = `translateX(${this.x}px)`;
-    }
-
-    render(selector) {
-        this.container.classList.add("animal") ;
-        this.span.innerText = this._animalName;
-        this.button.innerText = "move";
-        this.button.addEventListener("click", this.move.bind(this))
-        this.container.append(this.span);
-        this.container.append(this.button);
-
-        document.querySelector(selector).append(this.container);
-
-    }
-
+    new DeleteModal(this.title, onConfirm.bind(this)).render();
 }
 
+function editFunc() {
+    function onEdit(newTitle, newPost) {
+        this.title = newTitle;
+        this.post = newPost;
+        this._titleElem.innerText = newTitle;
+        this._postElem.innerText = newPost;
+    }
 
-class Dog extends Animal {
-    render(selector) {
-        super.render(selector);
-        this.container.classList.add("dog");
-    }
-    say(){
-        this.container.classList.add("dog-say");
-        setTimeout(()=>{
-            this.container.classList.remove("dog-say");
-        }, 200)
-    }
-    move(){
-        super.move();
-        if (this.getRandomChance()){
-            super.move();
-            this.say();
-        }
-    }
-}
-class Cat extends Animal {
-    render(selector) {
-        super.render(selector);
-        this.container.classList.add("cat");
-    }
-    say(){
-        this.container.classList.add("cat-say");
-        setTimeout(()=>{
-            this.container.classList.remove("cat-say");
-        }, 200)
-    }
-    move(){
-        if (this.getRandomChance()){
-            this.say();
-            return;
-        }
-        super.move();
-    }
+    new EditModal(this.title, this.post, onEdit.bind(this)).render();
 }
 
-class Snake extends Animal {
-    constructor(animalName, type) {
-        super(animalName);
-        if (type !== "poison" && type !== "safe") {
-            throw new Error('Bad snake')
-        }
-        this.type = type;
-    }
+posts.forEach(post => new ArticleCard(post.title, post.body, editFunc, deleteFunc).render());
 
-    render(selector) {
-        super.render(selector);
-        this.container.classList.add("snake");
-    }
 
-    move() {
-        this.x -= 15;
-        super.move();
-
-        if (this.getRandomChance()) {
-            alert("Sssssssssssssssssss!!!");
-            console.log('this.type', this.type);
-            if (this.type === "poison") {
-                document.querySelectorAll(".cat").forEach(elem => {
-                    elem.remove();
-                });
-
-                document.querySelectorAll(".dog").forEach(elem => {
-                    elem.remove();
-                });
-            }
-        }
-    }
-}
-
-new Dog("Rex").render(".container");
-new Cat("Summer").render(".container");
-new Snake("Bred", "safe").render(".container")
-new Snake("Poison", "poison").render(".container");
 
