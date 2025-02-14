@@ -1,110 +1,256 @@
-import { DeleteModal, EditModal } from "./modal/modal.js";
-import { ArticleCard, ImageCard } from "./card/card.js";
-
-
-const posts = [
-    {
-        id: 1,
-        title: "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-        body: "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-    },
-    {
-        id: 2,
-        title: "qui est esse",
-        body: "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
-    },
-    {
-        id: 3,
-        title: "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-        body: "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-    },
-    {
-        id: 4,
-        title: "eum et est occaecati",
-        body: "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
-    },
-    {
-        id: 5,
-        title: "nesciunt quas odio",
-        body: "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
-    },
-    {
-        id: 6,
-        title: "dolorem eum magni eos aperiam quia",
-        body: "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
-    },
-    {
-        id: 7,
-        title: "magnam facilis autem",
-        body: "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
-    },
-    {
-        id: 8,
-        title: "dolorem dolore est ipsam",
-        body: "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
-    },
-    {
-        id: 9,
-        title: "nesciunt iure omnis dolorem tempora et accusantium",
-        body: "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
-    },
-    {
-        id: 10,
-        title: "optio molestias id quia eum",
-        body: "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
-    },
-    {
-        id: 11,
-        title: "et ea vero quia laudantium autem",
-        body: "delectus reiciendis molestiae occaecati non minima eveniet qui voluptatibus\naccusamus in eum beatae sit\nvel qui neque voluptates ut commodi qui incidunt\nut animi commodi"
-    },
-    {
-        id: 12,
-        title: "in quibusdam tempore odit est dolorem",
-        body: "itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio"
-    },
-    {
-        id: 13,
-        title: "dolorum ut in voluptas mollitia et saepe quo animi",
-        body: "aut dicta possimus sint mollitia voluptas commodi quo doloremque\niste corrupti reiciendis voluptatem eius rerum\nsit cumque quod eligendi laborum minima\nperferendis recusandae assumenda consectetur porro architecto ipsum ipsam"
-    },
-    {
-        id: 14,
-        title: "voluptatem eligendi optio",
-        body: "fuga et accusamus dolorum perferendis illo voluptas\nnon doloremque neque facere\nad qui dolorum molestiae beatae\nsed aut voluptas totam sit illum"
-    },
-    {
-        id: 15,
-        title: "eveniet quod temporibus",
-        body: "reprehenderit quos placeat\nvelit minima officia dolores impedit repudiandae molestiae nam\nvoluptas recusandae quis delectus\nofficiis harum fugiat vitae"
-    },
-    {
-        id: 16,
-        title: "sint suscipit perspiciatis velit dolorum rerum ipsa laboriosam odio",
-        body: "suscipit nam nisi quo aperiam aut\nasperiores eos fugit maiores voluptatibus quia\nvoluptatem quis ullam qui in alias quia est\nconsequatur magni mollitia accusamus ea nisi voluptate dicta"
-    },
-];
-
-function deleteFunc(){
-    function onConfirm(){
-        this._mainContainer.remove();
-    }
-
-    new DeleteModal(this.title, onConfirm.bind(this)).render();
+/*
+{
+    "id": 1,
+    "characters": [
+        "https://ajax.test-danit.com/api/swapi/people/1",
+        "https://ajax.test-danit.com/api/swapi/people/2",
+        "https://ajax.test-danit.com/api/swapi/people/3",
+        "https://ajax.test-danit.com/api/swapi/people/4",
+        "https://ajax.test-danit.com/api/swapi/people/5",
+        "https://ajax.test-danit.com/api/swapi/people/6",
+        "https://ajax.test-danit.com/api/swapi/people/7",
+        "https://ajax.test-danit.com/api/swapi/people/8",
+        "https://ajax.test-danit.com/api/swapi/people/9",
+        "https://ajax.test-danit.com/api/swapi/people/10",
+        "https://ajax.test-danit.com/api/swapi/people/12",
+        "https://ajax.test-danit.com/api/swapi/people/13",
+        "https://ajax.test-danit.com/api/swapi/people/14",
+        "https://ajax.test-danit.com/api/swapi/people/15",
+        "https://ajax.test-danit.com/api/swapi/people/16",
+        "https://ajax.test-danit.com/api/swapi/people/18",
+        "https://ajax.test-danit.com/api/swapi/people/19",
+        "https://ajax.test-danit.com/api/swapi/people/81"
+    ],
+    "director": "George Lucas",
+    "episodeId": 4,
+    "openingCrawl": "It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire.\r\nDuring the battle, Rebel spies managed to steal secret plans to the Empire`s ultimate weapon, the DEATH STAR, an armored space station with enough power to destroy an entire planet.\r\nPursued by the Empire`s sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy...",
+    "planets": [
+        "https://ajax.test-danit.com/api/swapi/planets/1",
+        "https://ajax.test-danit.com/api/swapi/planets/2",
+        "https://ajax.test-danit.com/api/swapi/planets/3"
+    ],
+    "producer": "Gary Kurtz, Rick McCallum",
+    "releaseDate": "1977-05-25",
+    "species": [
+        "https://ajax.test-danit.com/api/swapi/species/1",
+        "https://ajax.test-danit.com/api/swapi/species/2",
+        "https://ajax.test-danit.com/api/swapi/species/3",
+        "https://ajax.test-danit.com/api/swapi/species/4",
+        "https://ajax.test-danit.com/api/swapi/species/5"
+    ],
+    "starships": [
+        "https://ajax.test-danit.com/api/swapi/starships/2",
+        "https://ajax.test-danit.com/api/swapi/starships/3",
+        "https://ajax.test-danit.com/api/swapi/starships/5",
+        "https://ajax.test-danit.com/api/swapi/starships/9",
+        "https://ajax.test-danit.com/api/swapi/starships/10",
+        "https://ajax.test-danit.com/api/swapi/starships/11",
+        "https://ajax.test-danit.com/api/swapi/starships/12",
+        "https://ajax.test-danit.com/api/swapi/starships/13"
+    ],
+    "name": "A New Hope",
+    "url": "https://ajax.test-danit.com/api/swapi/films/1",
+    "vehicles": [
+        "https://ajax.test-danit.com/api/swapi/vehicles/4",
+        "https://ajax.test-danit.com/api/swapi/vehicles/6",
+        "https://ajax.test-danit.com/api/swapi/vehicles/7",
+        "https://ajax.test-danit.com/api/swapi/vehicles/8"
+    ]
 }
 
-function editFunc() {
-    function onEdit(newTitle, newPost) {
-        this.title = newTitle;
-        this.post = newPost;
-        this._titleElem.innerText = newTitle;
-        this._postElem.innerText = newPost;
+ */
+
+class Film {
+    constructor(name, director, releaseDate, openingCrawl) {
+        this.name = name;
+        this.director = director;
+        this.releaseDate = releaseDate;
+        this.openingCrawl = openingCrawl;
+        this.root = document.createElement('div');
+        this.charactersContainer = document.createElement('div');
+        this.planetsContainer = document.createElement('div');
+        this.starshipsContainer = document.createElement('div');
     }
 
-    new EditModal(this.title, this.post, onEdit.bind(this)).render();
+    getHtmlTemplate() {
+        return `
+            <h2>${this.name}</h2>
+            <p>${this.director}</p>
+            <p>${this.releaseDate}</p>
+            <p>${this.openingCrawl}</p>
+        `
+    }
+
+    toggleCollapse({ currentTarget }) {
+        if (currentTarget.className.includes('сollapsed')) {
+            currentTarget.classList.remove('сollapsed');
+        } else {
+            currentTarget.classList.add('сollapsed');
+        }
+    }
+
+    render(selector = 'main') {
+        this.root.innerHTML = this.getHtmlTemplate();
+
+        this.root.append(this.charactersContainer);
+        this.charactersContainer.innerHTML = '<h3>Characters</h3>';
+        this.charactersContainer.addEventListener('click', this.toggleCollapse);
+        this.charactersContainer.className = 'items-container сollapsed loading';
+
+        this.root.append(this.planetsContainer);
+        this.planetsContainer.innerHTML = '<h3>Planets</h3>';
+        this.planetsContainer.addEventListener('click', this.toggleCollapse);
+        this.planetsContainer.className = 'items-container сollapsed loading';
+
+        this.root.append(this.starshipsContainer);
+        this.starshipsContainer.innerHTML = '<h3>Starships</h3>';
+        this.starshipsContainer.addEventListener('click', this.toggleCollapse);
+        this.starshipsContainer.className = 'items-container сollapsed loading';
+
+        document.querySelector(selector).appendChild(this.root);
+    }
+
+    addCharacter(characterElement) {
+        this.charactersContainer.appendChild(characterElement);
+        this.charactersContainer.classList.remove('loading');
+    }
+
+    addPlanet(planetElement) {
+        this.planetsContainer.appendChild(planetElement);
+        this.planetsContainer.classList.remove('loading');
+    }
+
+    addStarship(starshipElement) {
+        this.starshipsContainer.appendChild(starshipElement);
+        this.starshipsContainer.classList.remove('loading');
+    }
 }
 
-posts.forEach(post => new ArticleCard(post.title, post.body, editFunc, deleteFunc).render());
+class Character {
+    constructor(name, gender, hairColor) {
+        this.name = name;
+        this.gender = gender;
+        this.hairColor = hairColor;
+        this.root = document.createElement('div');
+    }
+
+    getElement() {
+        this.root.innerHTML = `
+            <h4>${this.name}</h4>
+            <p>${this.gender || ''}</p>
+            <p>${this.hairColor || ''}</p>
+            `;
+        this.root.className = 'card';
+
+        return this.root;
+    }
+};
+
+const Planet = class {
+    constructor(name, climate, population) {
+        this.name = name;
+        this.climate = climate;
+        this.population = population;
+        this.root = document.createElement('div');
+    }
+
+    getElement() {
+        this.root.innerHTML = `
+            <h4>${this.name}</h4>
+            <p>${this.climate || ''}</p>
+            <p>${this.population || ''}</p>
+            `;
+        this.root.className = 'card';
+
+        return this.root;
+    }
+};
+
+const Starship = class {
+    constructor(name, model, manufacturer) {
+        this.name = name;
+        this.model = model;
+        this.manufacturer = manufacturer;
+        this.root = document.createElement('div');
+    }
+
+    getElement() {
+        this.root.innerHTML = `
+            <h4>${this.name}</h4>
+            <p>${this.model || ''}</p>
+            <p>${this.manufacturer || ''}</p>
+            `;
+        this.root.className = 'card';
+
+        return this.root;
+    }
+}
+
+class Loader {
+    constructor() {
+        this.root = document.createElement('span');
+    }
+
+    addToElement(element) {
+        this.root.className = 'loader';
+        element.appendChild(this.root);
+    }
+
+    remove() {
+        this.root.remove();
+    }
+}
+
+axios.get('https://ajax.test-danit.com/api/swapi/films')
+.then(({ data  }) => {
+    console.log(data);
+
+    data.forEach(film => {
+        const filmObject = new Film(film.name, film.director, film.releaseDate, film.openingCrawl);
+        filmObject.render();
+
+        const charactersPromises = film.characters.map(characterUrl => axios.get(characterUrl));
+        const charactersLoader = new Loader();
+        charactersLoader.addToElement(filmObject.charactersContainer);
+        Promise.allSettled(charactersPromises)
+            .then((characters) => {
+                characters.forEach(character => {
+                    const characterData = character.value.data;
+                    const characterObject = new Character(characterData.name, characterData.gender, characterData.hairColor);
+                    filmObject.addCharacter(characterObject.getElement());
+                });
+
+                charactersLoader.remove();
+            });
 
 
+        const planetsPromises = film.planets.map(planetUrl => axios.get(planetUrl));
+        const planetsLoader = new Loader();
+        planetsLoader.addToElement(filmObject.planetsContainer);
+        Promise.allSettled(planetsPromises)
+            .then((planets) => {
+                planets.forEach(planet => {
+                    const planetData = planet.value.data;
+                    const planetObject = new Planet(planetData.name, planetData.climate, planetData.population);
+                    filmObject.addPlanet(planetObject.getElement());
+                });
 
+                planetsLoader.remove();
+            });
+
+
+        const starshipsPromises = film.starships.map(starshipUrl => axios.get(starshipUrl));
+        const starshipsLoader = new Loader();
+        starshipsLoader.addToElement(filmObject.starshipsContainer);
+        Promise.allSettled(starshipsPromises)
+            .then((starships) => {
+                starships.forEach(starship => {
+                    const starshipData = starship.value.data;
+                    const starshipObject = new Starship(starshipData.name, starshipData.model, starshipData.manufacturer);
+                    filmObject.addStarship(starshipObject.getElement());
+                });
+
+                starshipsLoader.remove();
+            });
+    });
+})
